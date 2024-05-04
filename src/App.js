@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import LoginComponent from "./components/LoginComponent/LoginComponent";
+import SignupComponent from "./components/SignupComponent/SignupComponent";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import "./App.css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+const App = () => {
+  const LoginCmpnt = () => (
+    <>
+      <div className="upper-container"></div>
+      <div className="login-signnup-header-container">!Login</div>
+      <LoginComponent />
+    </>
   );
-}
+
+  const SignupCmpnt = () => (
+    <>
+      <div className="upper-container"></div>
+      <div className="login-signnup-header-container">!Signup</div>
+      <SignupComponent />
+    </>
+  );
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" exact element={<LoginCmpnt/>} />
+        <Route path="/signup" element={<SignupCmpnt/>} />
+      </Routes>
+    </Router>
+  );
+};
 
 export default App;

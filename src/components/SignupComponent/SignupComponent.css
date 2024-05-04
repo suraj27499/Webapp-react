@@ -1,0 +1,65 @@
+.card-container {
+  width: 30vw;
+  height: 74vh;
+  max-height: 74vh;
+  overflow-y: auto;
+  position: fixed;
+  top: 24vh;
+  left: 33%;
+  box-shadow: 3px 2px 20px 0px #52229e;
+
+  &::-webkit-scrollbar {
+    width: 5px; /* Width of the scrollbar */
+  }
+
+  &::-webkit-scrollbar-track {
+    background: white; /* Color of the track */
+    border:1px solid #52229e;
+    border-radius: 2px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #764abc; /* Color of the thumb */
+    border-radius: 5px; /* Rounded corners of the thumb */
+    border: none /* Border around the thumb */
+  }
+}
+
+.button-primary {
+  background-color: #52229e !important;
+  color: white !important;
+}
+
+input.form-control:focus {
+  box-shadow: inset 0px 0px 5px 1px #764abc;
+}
+
+input.form-check-input:checked {
+  background-color: #764abc;
+  border-color: #764abc;
+  box-shadow: 0px 0px 5px 0px #52229e;
+}
+
+.password-input-container {
+  position: relative;
+}
+
+.password-icon-container {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+}
+
+.password-icon-container button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.error-text {
+  color: red;
+  font-family: sans-serif;
+  font-size: 14px;
+}
